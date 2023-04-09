@@ -1,0 +1,77 @@
+.maintitle {
+    margin-right: 150px;
+}   
+
+.menu {
+    display: none
+}
+
+.layout {
+    display: flex;
+}
+
+.mainlayout {
+    justify-content: space-around;
+}
+
+@media (max-width: 1550px) {
+    .guide {
+        flex-direction: column;
+    }
+    
+    .guidecards {
+        display: flex;
+    }
+
+    .guidethird {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .guide {
+        flex-direction: column;
+    }
+
+    .guidecards {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 900px) {
+    .titleimg {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .maintitle {
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+
+    .img {
+        justify-content: center;
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 700px) {
+    .menu {
+        display:inline-block;
+    }
+
+    .layout {
+        display: none;
+    }
+
+    .mainlayout {
+        justify-content: space-between;
+    }
+
+    .howtousetext {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

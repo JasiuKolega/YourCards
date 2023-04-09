@@ -1,0 +1,14 @@
+.link {
+
+    &:hover {
+        text-decoration: underline;
+        text-underline-offset: 5px
+    }
+}
+
+.button {
+
+    &:hover {
+        background-color: white;
+    }
+}
