@@ -8,36 +8,36 @@ import ModalSection from "./ModalSection";
 
 const CreateSection = () => {
   const { onOpen, isOpen, onClose } = useDisclosure();
-  const [modal, setModal] = React.useState<boolean>(false)
+  const [modal, setModal] = React.useState<boolean>(false);
 
   const onOpenClick = () => {
     setModal(true);
     onOpen();
-  }
+  };
 
   return (
-      <Box
-        className={styles.border}
-        height={"228px"}
-        width={"430px"}
-        display={"flex"}
-        flexDirection={"column"}
-        alignItems={"center"}
-        justifyContent={"center"}
+    <Box
+      className={styles.border}
+      height={"228px"}
+      width={"430px"}
+      display={"flex"}
+      flexDirection={"column"}
+      alignItems={"center"}
+      justifyContent={"center"}
+    >
+      <Button
+        borderRadius={"50%"}
+        height={"65px"}
+        width={"65px"}
+        onClick={onOpenClick}
       >
-        <Button
-          borderRadius={"50%"}
-          height={"65px"}
-          width={"65px"}
-          onClick={onOpenClick}
-        >
-          <AddIcon />
-        </Button>
-        <Text color={"grey"} pt={"10px"}>
-          Create a new Card!
-        </Text>
-        {modal ? <ModalSection isOpen={isOpen} onClose={onClose} /> : null}
-      </Box>
+        <AddIcon />
+      </Button>
+      <Text color={"grey"} pt={"10px"}>
+        Create a new Card!
+      </Text>
+      {modal ? <ModalSection isOpen={isOpen} onClose={onClose} /> : null}
+    </Box>
   );
 };
 

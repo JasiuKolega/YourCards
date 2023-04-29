@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useRef } from "react";
 import {
   AlertDialog,
   AlertDialogBody,
@@ -13,7 +13,7 @@ import { IDeleteCard } from "@/interfaces/ICard";
 import axios from "axios";
 
 const DeleteCards: FC<IDeleteCard> = ({ isOpen, onClose, id }) => {
-  const cancelRef = React.useRef();
+  const cancelRef = useRef(null);
 
   const deleteCard = (id: number | string) => {
     axios.delete(`https://641bf9349b82ded29d5cdf68.mockapi.io/sections/${id}`);
@@ -24,8 +24,8 @@ const DeleteCards: FC<IDeleteCard> = ({ isOpen, onClose, id }) => {
     <>
       <AlertDialog
         isOpen={isOpen}
-        leastDestructiveRef={cancelRef}
         onClose={onClose}
+        leastDestructiveRef={cancelRef}
       >
         <AlertDialogOverlay>
           <AlertDialogContent>

@@ -1,28 +1,34 @@
 export interface IModal {
-    modal: boolean
-    setModal: boolean
+  modal: boolean;
+  setModal: boolean;
 }
 
 export interface IModalProps {
-    isOpen: any
-    onClose: () => void
+  isOpen: any;
+  onClose: () => void;
+}
+
+export interface IModalPropsCard {
+  isOpen: any;
+  onClose: () => void;
+  parent: any;
 }
 
 export interface IModalObject {
-    word: string
-    translate: string
-    category: string
-    sentence: string
+  word: string;
+  translate: string;
+  category: string;
+  sentence: string;
 }
 
 export interface IModalObjectCard {
-    parent: any
-    word: string
-    translate: string
+  parent: any;
+  word: string;
+  translate: string;
 }
 
 export interface IGetModalObject {
-    id: string
-    name: string
-    language: string
+  id: string;
+  name: string;
+  language: string;
 }

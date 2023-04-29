@@ -5,7 +5,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-  Text
+  Text,
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import Link from "next/link";
@@ -13,7 +13,7 @@ import Link from "next/link";
 const MainLayout = ({ children, words }: Props) => {
   return (
     <>
-      <Box p={"25px"} pb={0} display={'flex'} justifyContent={'space-between'}>
+      <Box p={"25px"} pb={0} display={"flex"} justifyContent={"space-between"}>
         <Breadcrumb
           spacing="8px"
           separator={<ChevronRightIcon color="gray.500" />}

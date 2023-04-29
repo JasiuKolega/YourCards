@@ -12,22 +12,22 @@ import {
   FormLabel,
   Input,
 } from "@chakra-ui/react";
-import { IModalProps } from "@/interfaces/IModal";
+import { IModalPropsCard } from "@/interfaces/IModal";
 import axios from "axios";
 import { IModalObjectCard } from "@/interfaces/IModal";
 
-const ModalCard = ({ isOpen, onClose, parent }: IModalProps) => {
+const ModalCard = ({ isOpen, onClose, parent }: IModalPropsCard) => {
   const initialRef = React.useRef(null);
   const finalRef = React.useRef(null);
 
   const [word, setWord] = React.useState("");
   const [translate, setTranslate] = React.useState("");
 
-  const getWord = (event: React.FormEvent<HTMLInputElement>) => {
+  const getWord = (event: React.ChangeEvent<HTMLInputElement>) => {
     setWord(event.target.value);
   };
 
-  const getTranslate = (event: React.FormEvent<HTMLInputElement>) => {
+  const getTranslate = (event: React.ChangeEvent<HTMLInputElement>) => {
     setTranslate(event.target.value);
   };
 

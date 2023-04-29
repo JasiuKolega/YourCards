@@ -12,19 +12,18 @@ import {
 import { ICardProps } from "@/interfaces/ICard";
 import { Context } from "./context/Context";
 import styles from "../styles/Card.module.scss";
-import CardsPage from "@/pages/home/[id]";
 
 const Cards = ({ word, translate, parent, id }: ICardProps) => {
   return (
     <Box p={"25px"}>
       <Card borderRadius={"17px"} bgColor={"#28282b"}>
         <CardBody>
-          <Box borderBottom={'3px solid grey'}>
+          <Box borderBottom={"3px solid grey"}>
             <Text fontSize={"20px"}>
               Word: <span className={styles.span}>{word}</span>
             </Text>
           </Box>
-          <Box borderBottom={'3px solid grey'} pt={'10px'}>
+          <Box borderBottom={"3px solid grey"} pt={"10px"}>
             <Text fontSize={"20px"}>
               Translate: <span className={styles.span}>{translate}</span>
             </Text>

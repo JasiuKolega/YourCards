@@ -30,12 +30,16 @@ const CreateCard = ({ parent }: ICreateCardProps) => {
         width={"65px"}
         onClick={onOpenClick}
       >
-        <AddIcon />
+        <Box>
+          <AddIcon />
+        </Box>
       </Button>
       <Text color={"grey"} pt={"10px"}>
         Create a new Card!
       </Text>
-      {modal ? <ModalCard isOpen={isOpen} onClose={onClose} parent={parent} /> : null}
+      {modal ? (
+        <ModalCard isOpen={isOpen} onClose={onClose} parent={parent} />
+      ) : null}
     </Box>
   );
 };
