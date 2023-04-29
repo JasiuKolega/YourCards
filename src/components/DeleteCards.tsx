@@ -16,7 +16,7 @@ const DeleteCards: FC<IDeleteCard> = ({ isOpen, onClose, id }) => {
   const cancelRef = useRef(null);
 
   const deleteCard = (id: number | string) => {
-    axios.delete(`https://641bf9349b82ded29d5cdf68.mockapi.io/sections/${id}`);
+    axios.delete(`https://643af31070ea0e66028bd3f4.mockapi.io/cards/${id}`);
     onClose();
   };
 

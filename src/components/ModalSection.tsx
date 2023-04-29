@@ -26,20 +26,20 @@ const ModalSection = ({ isOpen, onClose }: IModalProps) => {
   const [sentence, setSentence] = React.useState("");
 
   const getCategory = (event: ChangeEvent<HTMLInputElement>) => {
-    setCategory(event.target.value)
-  }
+    setCategory(event.target.value);
+  };
 
   const getWord = (event: ChangeEvent<HTMLInputElement>) => {
-    setWord(event.target.value)
-  } 
+    setWord(event.target.value);
+  };
 
   const getTranslate = (event: ChangeEvent<HTMLInputElement>) => {
-    setTranslate(event.target.value)
-  }
+    setTranslate(event.target.value);
+  };
 
   const getSentence = (event: ChangeEvent<HTMLInputElement>) => {
-    setSentence(event.target.value)
-  }
+    setSentence(event.target.value);
+  };
 
   const createSectionObject: IModalObject = {
     word: word,
@@ -50,7 +50,7 @@ const ModalSection = ({ isOpen, onClose }: IModalProps) => {
 
   const postSection = () => {
     axios.post(
-      "https://641bf9349b82ded29d5cdf68.mockapi.io/sections",
+      "https://643af31070ea0e66028bd3f4.mockapi.io/cards",
       createSectionObject
     );
     onClose();
@@ -83,11 +83,7 @@ const ModalSection = ({ isOpen, onClose }: IModalProps) => {
 
             <FormControl mt={4}>
               <FormLabel>Word</FormLabel>
-              <Input
-                value={word}
-                onChange={getWord}
-                placeholder="Word"
-              />
+              <Input value={word} onChange={getWord} placeholder="Word" />
             </FormControl>
 
             <FormControl mt={4}>
