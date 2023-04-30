@@ -50,7 +50,7 @@ const ModalSection = ({ isOpen, onClose }: IModalProps) => {
 
   const postSection = () => {
     axios.post(
-      "https://643af31070ea0e66028bd3f4.mockapi.io/cards",
+      "https://644ec5074e86e9a4d800ff6a.mockapi.io/cards",
       createSectionObject
     );
     onClose();

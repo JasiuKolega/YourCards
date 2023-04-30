@@ -39,7 +39,7 @@ const ModalCard = ({ isOpen, onClose, parent }: IModalPropsCard) => {
 
   const postSection = () => {
     axios.post(
-      "https://641bf9349b82ded29d5cdf68.mockapi.io/cards",
+      "https://644ec5074e86e9a4d800ff6a.mockapi.io/cards",
       createCardObject
     );
     onClose();

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ISection } from "@/interfaces/ISection";
 
-const API_URL = "https://643af31070ea0e66028bd3f4.mockapi.io";
+const API_URL = "https://644ec5074e86e9a4d800ff6a.mockapi.io";
 axios.defaults.baseURL = API_URL;
 
 export const SectionService = {
